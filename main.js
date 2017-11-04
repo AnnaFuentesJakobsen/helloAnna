@@ -8,12 +8,15 @@ let imgSrc = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmQAAAMYCAYAAABlhvuy
 
 function setup() {
 	bg = loadImage("./assets/bg1.1.png");
-    background(bg);
-    createCanvas(windowW, windowH);
-    loadImage(imgSrc, function(img) {
-        glitch = new Glitch(img);
-        isLoaded = true;
-    });
+  background(bg);
+
+  var canvas = createCanvas(windowW, windowH);
+  canvas.parent('sketch-holder');
+
+  loadImage(imgSrc, function(img) {
+      glitch = new Glitch(img);
+      isLoaded = true;
+  });
     
 }
 
