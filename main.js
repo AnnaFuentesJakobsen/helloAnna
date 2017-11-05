@@ -26,12 +26,7 @@ function draw() {
 
     if (isLoaded) {
         glitch.show();
-    }
-
-    // fill(255, 255, 255);
-    // textSize(14);
-    // text('FPS: ' + floor(frameRate()), 20, 30);
-
+    } 
 }
 
 class Glitch {
@@ -103,7 +98,7 @@ class Glitch {
     flowLine(srcImg, obj) {
 
         let destPixels,
-            tempY;
+        tempY;
         destPixels = new Uint8ClampedArray(srcImg.pixels);
         obj.t1 %= srcImg.height;
         obj.t1 += obj.speed;
